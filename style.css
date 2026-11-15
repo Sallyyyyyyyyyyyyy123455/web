@@ -1,0 +1,165 @@
+/* Универсальный селектор для правильной блочной модели */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Общие стили для всего текста (ТЕМНЫЙ ФОН) */
+body {
+    font-family: 'Press Start 2P', cursive;
+    color: #ffffff; /* Весь основной текст белый */
+    background-color: #121212; 
+    line-height: 1.8;
+    font-size: 12px;
+}
+
+/* Ограничиваем ширину контента по центру экрана */
+header, main, footer {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ===== ШАПКА ===== */
+header {
+    padding-top: 40px;
+    padding-bottom: 30px;
+}
+
+header h1 {
+    font-size: 24px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    line-height: 1.4;
+    color: #fca311; /* Желтый/оранжевый логотип */
+    text-shadow: 0 0 10px rgba(252, 163, 17, 0.5); 
+}
+
+/* Навигация */
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+nav a {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 12px;
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+/* Красный цвет при наведении */
+nav a:hover {
+    color: #e63946; 
+}
+
+/* ===== ОСНОВНОЙ КОНТЕНТ ===== */
+.image-container {
+    width: 100%;
+    margin-bottom: 20px;
+    border: 4px solid #333333;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(252, 163, 17, 0.2);
+    background-color: #222; 
+}
+
+.main-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Все заголовки H2 желтые */
+section h2 {
+    font-size: 16px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    color: #fca311; 
+}
+
+/* Весь текст в параграфах белый */
+section p {
+    font-size: 12px;
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+/* Список преимуществ */
+section ul {
+    padding-left: 20px; 
+}
+
+/* Текст в списке белый */
+section ul li {
+    font-size: 12px;
+    margin-bottom: 15px;
+    list-style-type: square; 
+    color: #ffffff; /* Текст белый */
+}
+
+section ul li::marker {
+    color: #fca311; /* Квадратики списка желтые для красоты */
+}
+
+/* ===== ТАБЛИЦА ===== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    background-color: #1e1e1e;
+}
+
+table th, 
+table td {
+    border: 2px solid #444444;
+    padding: 15px;
+    text-align: center;
+    font-size: 10px;
+    color: #ffffff; /* Текст таблицы белый */
+}
+
+table th {
+    background-color: #2a2a2a;
+    color: #fca311; /* Заголовки таблицы желтые */
+}
+
+table th:first-child,
+table td:first-child {
+    width: 50px;
+}
+
+/* ===== ФУТЕР ===== */
+footer {
+    background-color: #000000;
+    color: #ffffff;
+    max-width: 100%; 
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+    border-top: 2px solid #333333;
+}
+
+footer p {
+    font-size: 12px;
+    width: 100%;
+    max-width: 860px; 
+}
+
+footer a {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 12px;
+    color: #fca311; /* Ссылка желтая */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+/* Ссылка в футере краснеет при наведении */
+footer a:hover {
+    color: #e63946; 
+}
