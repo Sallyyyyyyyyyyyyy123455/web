@@ -3,44 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ШАУРМА PRO — Доставка 24/7</title>
+    <title>ШАУРМА PRO — Главная</title>
     
-    <!-- Подключение пиксельного шрифта Press Start 2P -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     
-    <!-- Подключение файла со стилями -->
+    <!-- Общие стили -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Шапка сайта -->
     <header>
         <h1>ШАУРМА PRO</h1>
         <nav>
-            <a href="#about">О нас</a>
-            <a href="#order">Собрать ланч</a>
-            <a href="#orders">Заказы</a>
+            <!-- Ссылка на главную (активная) -->
+            <a href="index.html" class="active">О нас</a>
+            <!-- Ссылка на меню -->
+            <a href="lunch.html">Собрать ланч</a>
+            <a href="#">Заказы</a>
             <a href="#contacts">Контакты</a>
         </nav>
     </header>
 
-    <!-- Основной контент -->
     <main>
-        <!-- Блок О нас -->
         <section id="about">
-            
-            <!-- ВАША КАРТИНКА -->
             <div class="image-container">
+                <!-- Картинка главной страницы -->
                 <img src="shawerma.png" alt="Доставка шаурмы по всему миру" class="main-image">
             </div>
-            
             <h2>О нас</h2>
             <p>ШАУРМА PRO — это не просто шаурма, это гастрономическое удовольствие. Мы работаем 24 часа в сутки и доставляем сочную шаурму по всему миру, сохраняя идеальную температуру каждого продукта благодаря уникальной термоупаковке.</p>
         </section>
 
-        <!-- Блок Преимущества -->
         <section id="advantages">
             <h2>Преимущества</h2>
             <ul>
@@ -50,7 +46,6 @@
             </ul>
         </section>
 
-        <!-- Блок Топ-5 блюд -->
         <section id="popular">
             <h2>Топ-5 блюд</h2>
             <table>
@@ -98,7 +93,6 @@
         </section>
     </main>
 
-    <!-- Подвал сайта (Футер) -->
     <footer id="contacts">
         <p>Позвонить нам <a href="tel:+70000000000">+7-000-000-00-00</a></p>
     </footer>
