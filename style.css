@@ -4,13 +4,13 @@
     padding: 0;
 }
 
-/* Прижимаем футер к низу, общие цвета */
 body {
-    font-family: 'Press Start 2P', cursive;
+    /* Основной текст (описания) - Dela Gothic One для читаемости */
+    font-family: 'Dela Gothic One', sans-serif; 
     color: #ffffff;
     background-color: #121212;
-    line-height: 1.8;
-    font-size: 12px;
+    line-height: 1.5; 
+    font-size: 14px; 
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -24,7 +24,7 @@ header, main, footer {
 }
 
 main {
-    flex: 1; /* Растягивает контент */
+    flex: 1;
     padding-bottom: 40px;
 }
 
@@ -33,7 +33,9 @@ header {
     padding-bottom: 30px;
 }
 
+/* Логотип (желтый) - Пиксельный */
 header h1 {
+    font-family: 'Press Start 2P', cursive;
     font-size: 24px;
     margin-bottom: 30px;
     text-transform: uppercase;
@@ -41,13 +43,13 @@ header h1 {
     text-shadow: 0 0 10px rgba(252, 163, 17, 0.5);
 }
 
-/* Меню */
 nav {
     display: flex;
     flex-wrap: wrap;
     gap: 15px;
 }
 
+/* Ссылки в меню - Пиксельные */
 nav a {
     font-family: 'Press Start 2P', cursive;
     font-size: 12px;
@@ -60,12 +62,12 @@ nav a:hover {
     color: #e63946;
 }
 
-/* Активная ссылка в меню */
+/* Активная ссылка (красная) */
 nav a.active {
     color: tomato;
+    text-shadow: 1px 1px 0 #000;
 }
 
-/* Картинка на главной */
 .image-container {
     width: 100%;
     margin-bottom: 20px;
@@ -82,16 +84,18 @@ nav a.active {
     display: block;
 }
 
-/* Заголовки и текст */
+/* Заголовки H2 (желтые) - Пиксельные */
 section h2 {
+    font-family: 'Press Start 2P', cursive;
     font-size: 16px;
     margin-top: 40px;
     margin-bottom: 20px;
     color: #fca311;
 }
 
+/* Текст в абзацах - Dela Gothic One */
 section p {
-    font-size: 12px;
+    font-size: 14px;
     margin-bottom: 15px;
     color: #ffffff;
 }
@@ -100,9 +104,11 @@ section ul {
     padding-left: 20px;
 }
 
+/* Список преимуществ (белый текст) - Dela Gothic One */
 section ul li {
-    font-size: 12px;
-    margin-bottom: 15px;
+    font-family: 'Dela Gothic One', sans-serif;
+    font-size: 14px;
+    margin-bottom: 10px;
     list-style-type: square;
     color: #ffffff;
 }
@@ -111,7 +117,7 @@ section ul li::marker {
     color: #fca311;
 }
 
-/* Таблица (главная) */
+/* Таблица */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -120,24 +126,33 @@ table {
     background-color: #1e1e1e;
 }
 
-table th, table td {
-    border: 2px solid #444444;
-    padding: 15px;
-    text-align: center;
-    font-size: 10px;
-    color: #ffffff;
-}
-
+/* Шапка таблицы - Пиксельный шрифт */
 table th {
+    font-family: 'Press Start 2P', cursive; 
     background-color: #2a2a2a;
     color: #fca311;
+    border: 2px solid #444444;
+    padding: 15px 10px;
+    text-align: center;
+    font-size: 10px; /* Уменьшили из-за ширины пиксельного шрифта */
+    line-height: 1.5; 
+}
+
+/* Ячейки с данными - Dela Gothic One */
+table td {
+    font-family: 'Dela Gothic One', sans-serif; /* Вернули второй шрифт */
+    border: 2px solid #444444;
+    padding: 15px 10px;
+    text-align: center;
+    font-size: 14px; /* Размер под Dela Gothic One */
+    color: #ffffff;
+    line-height: 1.3; 
 }
 
 table th:first-child, table td:first-child {
     width: 50px;
 }
 
-/* Футер */
 footer {
     background-color: #000000;
     color: #ffffff;
@@ -148,15 +163,17 @@ footer {
     width: 100%;
 }
 
+/* Футер (желтый текст) - Пиксельный */
 footer p {
-    font-size: 12px;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 10px;
     width: 100%;
     max-width: 860px;
 }
 
 footer a {
     font-family: 'Press Start 2P', cursive;
-    font-size: 12px;
+    font-size: 10px;
     color: #fca311;
     text-decoration: none;
     transition: color 0.3s ease;
@@ -166,7 +183,6 @@ footer a:hover {
     color: #e63946;
 }
 
-/* ===== АДАПТИВНОСТЬ ДЛЯ ГЛАВНОЙ ===== */
 @media (max-width: 800px) {
     .main-image {
         width: 500px;
@@ -187,19 +203,26 @@ footer a:hover {
         align-items: center;
     }
     nav a {
-        font-size: 16px;
+        font-size: 14px;
     }
     .main-image {
         width: 100%;
     }
-    table th, table td {
+    table th {
         font-size: 8px;
+    }
+    table td {
+        font-size: 12px;
     }
 }
 
 @media (max-width: 400px) {
-    table th, table td {
+    table th {
         font-size: 6px;
-        padding: 5px;
+        padding: 8px 4px;
+    }
+    table td {
+        font-size: 10px;
+        padding: 8px 4px;
     }
 }

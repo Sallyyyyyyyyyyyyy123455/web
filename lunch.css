@@ -1,22 +1,22 @@
-/* Отступы для секций на странице меню */
 .menu-section {
-    margin-bottom: 40px;
+    margin-bottom: 50px;
 }
 
 .menu-section h2 {
+    font-family: 'Press Start 2P', cursive;
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 35px;
     color: #fca311;
+    text-shadow: 0 0 5px #fca311, 0 0 15px rgba(252, 163, 17, 0.6);
+    font-size: 18px;
 }
 
-/* Сетка для блюд (CSS Grid) */
 .dishes-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
 }
 
-/* Карточка блюда (Flex) */
 .dish-card {
     display: flex;
     flex-direction: column;
@@ -24,74 +24,78 @@
     border-radius: 35px;
     cursor: pointer;
     filter: drop-shadow(17px 19px 24px rgba(0, 0, 0, 0.13));
-    
-    /* Неоново-желтый фон карточки */
     background-color: #fca311; 
     color: #000000;
-    
     border: 2px solid transparent;
     transition: border-color 0.3s ease, background-color 0.3s ease;
     overflow: hidden; 
 }
 
-/* Hover эффект: красная рамка вокруг блюда */
 .dish-card:hover {
     border-color: tomato;
 }
 
-/* Меняем цвет кнопки при наведении на карточку */
 .dish-card:hover button {
     background-color: tomato;
     color: #ffffff;
 }
 
-/* Картинка внутри карточки */
+/* Картинка внутри карточки - прямоугольная (4:3) */
 .dish-card img {
     width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 3; 
     border-radius: 35px;
     margin-bottom: 15px;
-    aspect-ratio: 1 / 1;
-    object-fit: cover;
+    object-fit: cover; 
     border: 2px solid #000;
 }
 
-/* Цена (Красная) */
+/* Цена - ПИКСЕЛЬНЫЙ шрифт, красный с черной обводкой */
 .dish-card .price {
-    font-size: 18px;
-    font-weight: bold;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 16px;
     margin-bottom: 5px;
     color: tomato; 
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
-/* Название */
+/* Название - Dela Gothic One, белое с черной обводкой */
 .dish-card .name {
-    font-size: 14px;
-    margin-bottom: 5px;
-    flex-grow: 1;
+    font-family: 'Dela Gothic One', sans-serif;
+    font-size: 18px; 
+    margin-bottom: 10px;
+    flex-grow: 1; /* Растягивает название, прижимая вес и кнопку вниз */
+    color: #ffffff; 
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
-/* Вес/объем */
+/* Вес - ПИКСЕЛЬНЫЙ шрифт, красный с черной обводкой */
 .dish-card .weight {
+    font-family: 'Press Start 2P', cursive;
     font-size: 12px;
-    color: #333333;
-    margin-bottom: 15px;
+    color: tomato; 
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    
+    /* ВОТ ТУТ МАГИЯ: прижимаем вправо и задаем отступ до кнопки */
+    align-self: flex-end; /* Прижимает к правому краю */
+    margin-bottom: 15px;  /* Отступ до кнопки Добавить */
 }
 
-/* Кнопка "Добавить" */
+/* Кнопка - пиксельный шрифт */
 .dish-card button {
     font-family: 'Press Start 2P', cursive;
     background-color: #1e1e1e;
     color: #ffffff;
-    padding: 10px 30px;
+    padding: 12px 30px;
     border-radius: 10px;
     cursor: pointer;
     border: 2px solid #000;
-    font-size: 10px;
-    margin-top: auto; 
+    font-size: 12px;
+    width: 100%; /* Кнопка на всю ширину карточки */
     transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
-/* ===== АДАПТИВНОСТЬ ДЛЯ МЕНЮ ===== */
 @media (max-width: 800px) {
     .dishes-grid {
         grid-template-columns: repeat(2, 1fr);
