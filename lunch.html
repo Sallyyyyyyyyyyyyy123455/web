@@ -17,172 +17,112 @@
     <header>
         <h1>ШАУРМА PRO</h1>
         <nav>
+            <a href="landing.html">Главная</a>
             <a href="index.html">О нас</a>
             <a href="lunch.html" class="active">Собрать ланч</a>
-            <a href="#">Заказы</a>
+            <a href="order.html">Оформить заказ</a>
+            <a href="history.html">Мои заказы</a>
             <a href="#contacts">Контакты</a>
         </nav>
     </header>
 
     <main>
-        <!-- Шаурма и роллы -->
-        <section class="menu-section">
+        <section class="lunch-variants-section">
+            <h2>Доступные для заказа комбо</h2>
+            <div class="variants-container">
+                <div class="variant">
+                    <div class="variant-dish"><img src="icon-main.png" alt="Главное"><p>Главное блюдо</p></div>
+                    <div class="variant-dish"><img src="icon-salad.png" alt="Салат"><p>Салат</p></div>
+                    <div class="variant-dish"><img src="icon-drink.png" alt="Напиток"><p>Напиток</p></div>
+                </div>
+                <div class="variant">
+                    <div class="variant-dish"><img src="icon-main.png" alt="Главное"><p>Главное блюдо</p></div>
+                    <div class="variant-dish"><img src="icon-drink.png" alt="Напиток"><p>Напиток</p></div>
+                </div>
+                <div class="variant">
+                    <div class="variant-dish"><img src="icon-main.png" alt="Главное"><p>Главное блюдо</p></div>
+                    <div class="variant-dish"><img src="icon-salad.png" alt="Салат"><p>Салат</p></div>
+                </div>
+                <div class="variant">
+                    <div class="variant-dish"><img src="icon-salad.png" alt="Салат"><p>Салат</p></div>
+                    <div class="variant-dish"><img src="icon-drink.png" alt="Напиток"><p>Напиток</p></div>
+                </div>
+                <div class="variant">
+                    <div class="variant-dish"><img src="icon-main.png" alt="Главное"><p>Главное блюдо</p></div>
+                    <div class="variant-dish"><img src="icon-drink.png" alt="Напиток"><p>Напиток</p></div>
+                </div>
+                <div class="variant variant-dessert">
+                    <div class="variant-dish">
+                        <img src="icon-dessert.png" alt="Десерт">
+                        <p>Десерт</p>
+                        <span class="dessert-note">(Можно добавить к любому заказу)</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="menu-section" id="section-main">
             <h2>Шаурма и роллы</h2>
-            <div class="dishes-grid">
-                <div class="dish-card">
-                    <img src="pic1.png" alt="Шаурма Королевская">
-                    <p class="price">450₽</p>
-                    <p class="name">Шаурма «Королевская» с телятиной</p>
-                    <p class="weight">400 г</p>
-                    <button>Добавить</button>
-                </div>
-                <div class="dish-card">
-                    <img src="pic2.png" alt="Шаурма Острая">
-                    <p class="price">320₽</p>
-                    <p class="name">Шаурма «Острая» с курицей и халапеньо</p>
-                    <p class="weight">350 г</p>
-                    <button>Добавить</button>
-                </div>
-                <div class="dish-card">
-                    <img src="pic3.png" alt="Шаурма Сырная">
-                    <p class="price">380₽</p>
-                    <p class="name">Шаурма «Сырный взрыв» с двойным сыром</p>
-                    <p class="weight">380 г</p>
-                    <button>Добавить</button>
-                </div>
+            <div class="filters">
+                <button class="filter-btn" data-category="main" data-kind="fish">Рыбное</button>
+                <button class="filter-btn" data-category="main" data-kind="meat">Мясное</button>
+                <button class="filter-btn" data-category="main" data-kind="veg">Вегетарианское</button>
             </div>
+            <div class="dishes-grid" id="category-main"></div>
         </section>
 
-        <!-- Горячие блюда -->
-        <section class="menu-section">
-            <h2>Горячие блюда</h2>
-            <div class="dishes-grid">
-                <div class="dish-card">
-                    <img src="pic4.png" alt="Люля-кебаб">
-                    <p class="price">410₽</p>
-                    <p class="name">Люля-кебаб в лаваше с бараниной</p>
-                    <p class="weight">300 г</p>
-                    <button>Добавить</button>
-                </div>
-                <div class="dish-card">
-                    <img src="pic5.png" alt="Фалафель-ролл">
-                    <p class="price">290₽</p>
-                    <p class="name">Фалафель-ролл вегетарианский</p>
-                    <p class="weight">280 г</p>
-                    <button>Добавить</button>
-                </div>
-                <div class="dish-card">
-                    <img src="pic6.png" alt="Шашлык">
-                    <p class="price">550₽</p>
-                    <p class="name">Шашлык из свиной шеи</p>
-                    <p class="weight">250 г</p>
-                    <button>Добавить</button>
-                </div>
+        <section class="menu-section" id="section-salads">
+            <h2>Салаты и стартеры</h2>
+            <div class="filters">
+                <button class="filter-btn" data-category="salads" data-kind="fish">Рыбный</button>
+                <button class="filter-btn" data-category="salads" data-kind="meat">Мясной</button>
+                <button class="filter-btn" data-category="salads" data-kind="veg">Вегетарианский</button>
             </div>
+            <div class="dishes-grid" id="category-salads"></div>
         </section>
 
-        <!-- Снеки -->
-        <section class="menu-section">
+        <section class="menu-section" id="section-snacks">
             <h2>Снеки</h2>
-            <div class="dishes-grid">
-                <div class="dish-card">
-                    <img src="pic7.png" alt="Картофель фри">
-                    <p class="price">150₽</p>
-                    <p class="name">Картофель фри</p>
-                    <p class="weight">150 г</p>
-                    <button>Добавить</button>
-                </div>
-                <div class="dish-card">
-                    <img src="pic8.png" alt="Картофель батат">
-                    <p class="price">200₽</p>
-                    <p class="name">Картофель батат с соусом</p>
-                    <p class="weight">150 г</p>
-                    <button>Добавить</button>
-                </div>
-                <div class="dish-card">
-                    <img src="pic9.png" alt="Наггетсы">
-                    <p class="price">180₽</p>
-                    <p class="name">Наггетсы куриные</p>
-                    <p class="weight">6 шт.</p>
-                    <button>Добавить</button>
-                </div>
-                <div class="dish-card">
-                    <img src="pic10.png" alt="Сырные палочки">
-                    <p class="price">220₽</p>
-                    <p class="name">Сырные палочки</p>
-                    <p class="weight">5 шт.</p>
-                    <button>Добавить</button>
-                </div>
-                <div class="dish-card">
-                    <img src="pic11.png" alt="Луковые кольца">
-                    <p class="price">160₽</p>
-                    <p class="name">Луковые кольца</p>
-                    <p class="weight">120 г</p>
-                    <button>Добавить</button>
-                </div>
-                <div class="dish-card">
-                    <img src="pic12.png" alt="Крылья BBQ">
-                    <p class="price">260₽</p>
-                    <p class="name">Куриные крылья BBQ</p>
-                    <p class="weight">6 шт.</p>
-                    <button>Добавить</button>
-                </div>
+            <div class="filters">
+                <button class="filter-btn" data-category="snacks" data-kind="meat">Мясные</button>
+                <button class="filter-btn" data-category="snacks" data-kind="veg">Вегетарианские</button>
+                <button class="filter-btn" data-category="snacks" data-kind="cheese">Сырные</button>
             </div>
+            <div class="dishes-grid" id="category-snacks"></div>
         </section>
 
-        <!-- Напитки -->
-        <section class="menu-section">
+        <section class="menu-section" id="section-drinks">
             <h2>Напитки</h2>
-            <div class="dishes-grid">
-                <div class="dish-card">
-                    <img src="pic13.png" alt="Кола">
-                    <p class="price">120₽</p>
-                    <p class="name">Кола классическая</p>
-                    <p class="weight">0.5 л</p>
-                    <button>Добавить</button>
-                </div>
-                <div class="dish-card">
-                    <img src="pic14.png" alt="Лимонад">
-                    <p class="price">150₽</p>
-                    <p class="name">Домашний лимонад</p>
-                    <p class="weight">0.4 л</p>
-                    <button>Добавить</button>
-                </div>
-                <div class="dish-card">
-                    <img src="pic15.png" alt="Апельсиновый сок">
-                    <p class="price">180₽</p>
-                    <p class="name">Сок апельсиновый</p>
-                    <p class="weight">0.3 л</p>
-                    <button>Добавить</button>
-                </div>
-                <div class="dish-card">
-                    <img src="pic16.png" alt="Молочный коктейль">
-                    <p class="price">220₽</p>
-                    <p class="name">Молочный коктейль</p>
-                    <p class="weight">0.4 л</p>
-                    <button>Добавить</button>
-                </div>
-                <div class="dish-card">
-                    <img src="pic17.png" alt="Чай">
-                    <p class="price">90₽</p>
-                    <p class="name">Чай черный / зеленый</p>
-                    <p class="weight">0.3 л</p>
-                    <button>Добавить</button>
-                </div>
-                <div class="dish-card">
-                    <img src="pic18.png" alt="Кофе">
-                    <p class="price">140₽</p>
-                    <p class="name">Кофе американо</p>
-                    <p class="weight">0.2 л</p>
-                    <button>Добавить</button>
-                </div>
+            <div class="filters">
+                <button class="filter-btn" data-category="drinks" data-kind="cold">Холодные</button>
+                <button class="filter-btn" data-category="drinks" data-kind="hot">Горячие</button>
             </div>
+            <div class="dishes-grid" id="category-drinks"></div>
+        </section>
+
+        <section class="menu-section" id="section-desserts">
+            <h2>Десерты</h2>
+            <div class="filters">
+                <button class="filter-btn" data-category="desserts" data-kind="pastry">Выпечка</button>
+                <button class="filter-btn" data-category="desserts" data-kind="icecream">Мороженое</button>
+                <button class="filter-btn" data-category="desserts" data-kind="cake">Торты</button>
+            </div>
+            <div class="dishes-grid" id="category-desserts"></div>
         </section>
     </main>
+
+    <div id="checkout-panel" class="checkout-panel hidden">
+        <div class="panel-content">
+            <p>Сумма заказа: <span id="total-price">0</span>₽</p>
+            <a href="order.html" id="checkout-link" class="btn-checkout">Перейти к оформлению</a>
+        </div>
+    </div>
 
     <footer id="contacts">
         <p>Позвонить нам <a href="tel:+70000000000">+7-000-000-00-00</a></p>
     </footer>
 
+    <script src="dishes.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
